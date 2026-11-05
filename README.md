@@ -86,6 +86,7 @@ Les R² présentés mesurent l'ajustement **sur l'échantillon d'estimation** ; 
 ```text
 evaluation-actifs-financiers/
 ├── README.md
+├── .gitignore
 ├── code/
 │   └── projetAMÉLIEPIRES.ipynb
 │   └── requirements.txt
