@@ -1,0 +1,16 @@
+# Annexes générées
+annexes_figures/
+annexes_tableaux/
+annexe_tableaux/
+
+# Environnements Python
+.venv/
+venv/
+
+# Fichiers temporaires Python et Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Fichiers macOS
+.DS_Store
