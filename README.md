@@ -1,6 +1,6 @@
 # Évaluation des actifs financiers — CAPM et modèles Fama-French
 
-Projet réalisé dans le cadre du cours d'Évaluation des actifs financiers en Master 1 Économétrie Appliquée à l'IAE Nantes, en 2025-2026 avec Julien DUC.
+Projet réalisé dans le cadre du cours d'Évaluation des actifs financiers de Julien DUC en Master 1 Économétrie Appliquée à l'IAE Nantes, en 2025-2026.
 
 ## Objectif
 
@@ -86,17 +86,15 @@ Les R² présentés mesurent l'ajustement **sur l'échantillon d'estimation** ; 
 ```text
 evaluation-actifs-financiers/
 ├── README.md
-├── .gitignore
-├── requirements.txt
 ├── code/
-│   └── analyse_actifs_financiers.ipynb
+│   └── projetAMÉLIEPIRES.ipynb
+│   └── requirements.txt
 ├── data/
-│   └── raw/
 │       ├── FamaFrench_5F.csv
 │       ├── Portefeuilles_Industries_49.csv
 │       └── Industries.txt
 ├── rapport/
-│   └── rapport.pdf
+│   └── Projet.pdf
 └── figures/
     ├── comparaison_r2.png
     ├── alpha_rolling_telcm.png
