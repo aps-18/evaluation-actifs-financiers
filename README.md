@@ -1,6 +1,8 @@
-# Évaluation des actifs financiers (CAPM et modèles Fama-French)
+Évaluation des actifs financiers (CAPM et modèles Fama-French)
 
 Projet réalisé dans le cadre du cours d'Évaluation des actifs financiers de Julien DUC en Master 1 Économétrie Appliquée à l'IAE Nantes, en 2025-2026.
+
+Ce dépôt présente un travail académique rendu dans le cadre du cours. Le rapport est conservé dans sa version originale. Les adaptations du notebook pour GitHub concernent les chemins des fichiers, l'installation des bibliothèques et l'enregistrement des figures ; les calculs de l'analyse sont conservés.
 
 ## Objectif
 
@@ -18,7 +20,7 @@ L'échantillon commun comprend **748 observations mensuelles, de juillet 1963 à
 
 Les rendements sont exprimés en pourcentage mensuel. Les rendements excédentaires sont construits par différence entre le rendement sectoriel et le taux sans risque : **Ri − Rf**.
 
-Les données proviennent de la [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html). Les copies utilisées sont conservées dans `data/raw/` afin de reproduire l'échantillon du notebook. La pondération des portefeuilles n'est pas précisée dans le CSV fourni.
+Les données proviennent de la [Kenneth R. French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html). Les copies utilisées sont conservées dans `data/` afin de reproduire l'échantillon du notebook. La pondération des portefeuilles n'est pas précisée dans le CSV fourni.
 
 ## Méthodologie
 
@@ -88,12 +90,12 @@ evaluation-actifs-financiers/
 ├── README.md
 ├── .gitignore
 ├── code/
-│   └── projetAMÉLIEPIRES.ipynb
+│   ├── projetAMÉLIEPIRES.ipynb
 │   └── requirements.txt
 ├── data/
-│       ├── FamaFrench_5F.csv
-│       ├── Portefeuilles_Industries_49.csv
-│       └── Industries.txt
+│   ├── FamaFrench_5F.csv
+│   ├── Portefeuilles_Industries_49.csv
+│   └── Industries.txt
 ├── rapport/
 │   └── Projet.pdf
 └── figures/
@@ -105,22 +107,36 @@ evaluation-actifs-financiers/
 
 ## Reproduire l'analyse
 
-Avec Python 3, depuis la racine du dépôt :
+### Depuis VS Code
+
+1. Ouvrir le dossier du dépôt dans VS Code, avec les extensions **Python** et **Jupyter** de Microsoft installées.
+2. Ouvrir `code/projetAMÉLIEPIRES.ipynb` et sélectionner un environnement Python 3 comme noyau du notebook.
+3. Exécuter la première cellule : elle installe les bibliothèques listées dans `code/requirements.txt` dans l'environnement du notebook.
+4. Si une bibliothèque vient d'être installée ou mise à jour, redémarrer le noyau, puis exécuter toutes les cellules dans l'ordre avec **Run All**.
+
+Les chemins du notebook fonctionnent lorsque le dossier de travail est situé à la racine du dépôt ou dans `code/`.
+
+### Depuis JupyterLab
+
+Depuis la racine du dépôt, dans un environnement Python 3 :
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -r code/requirements.txt
+python -m pip install jupyterlab
 python -m jupyterlab
 ```
 
-Ouvrir `code/analyse_actifs_financiers.ipynb`, puis exécuter toutes les cellules dans l'ordre. Le notebook peut être lancé avec un dossier de travail situé à la racine du dépôt ou dans `code/`.
+Ouvrir ensuite `code/projetAMÉLIEPIRES.ipynb`, sélectionner le noyau correspondant à cet environnement et exécuter toutes les cellules dans l'ordre.
 
-Les sorties enregistrées dans le notebook permettent également de consulter les tableaux et graphiques directement sur GitHub. Les quatre images de `figures/` ont été extraites de ces sorties.
+### Fichiers générés
 
-La cellule d'export génère des tableaux CSV/PDF et des figures PDF dans `annexes_tableaux/` et `annexes_figures/`, à la racine du projet. Ces exports sont ignorés par Git ; ils ne sont pas inclus dans le dépôt initial.
+Les quatre images PNG de `figures/` sont enregistrées automatiquement lors de l'exécution du notebook. Les sorties enregistrées permettent également de consulter les tableaux et graphiques directement sur GitHub.
+
+La cellule d'export génère des tableaux CSV/PDF et des figures PDF dans `annexes_tableaux/` et `annexes_figures/`, à la racine du projet. Ces deux dossiers sont ignorés par Git et peuvent être recréés en exécutant le notebook.
 
 ## Rapport
 
-[Consulter le rapport complet (PDF)](rapport/rapport.pdf)
+[Consulter le rapport complet (PDF)](rapport/Projet.pdf)
 
 Le rapport universitaire original présente la démarche, les interprétations, la discussion des modèles et les annexes. Ses tableaux reprennent les résultats du notebook. Il est conservé dans sa version originale.
 
