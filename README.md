@@ -1,4 +1,4 @@
-# Évaluation des actifs financiers — CAPM et modèles Fama-French
+# Évaluation des actifs financiers (CAPM et modèles Fama-French)
 
 Projet réalisé dans le cadre du cours d'Évaluation des actifs financiers de Julien DUC en Master 1 Économétrie Appliquée à l'IAE Nantes, en 2025-2026.
 
